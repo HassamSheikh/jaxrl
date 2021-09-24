@@ -6,11 +6,6 @@ here = pathlib.Path(__file__).parent.resolve()
 
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
-install_requires = [
- 
-    'gym[mujoco] >= 0.18.0',
-]
-
 description = ('Implementations of Reinforcement Learning algorithms in Jax.')
 
 setup(
