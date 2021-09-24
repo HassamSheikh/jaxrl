@@ -11,7 +11,7 @@ install_requires = [
 ]
 install_requires = [
     'numpy == 1.20.2', 'scipy == 1.6.0', 'absl-py == 0.12.0',
-    'gdown == 3.12.2', 'tqdm == 4.60.1',
+    'gdown == 3.12.2', 'tqdm == 4.61.0',
     'flax == 0.3.4', 'jax == 0.2.13', 'jaxlib == 0.1.67',
     'ml_collections == 0.1.0', 'optax == 0.0.6', 'tensorboardX == 2.1',
     'tensorflow-probability >= 0.13.0', 'imageio == 2.9.0',
