@@ -29,6 +29,5 @@ setup(
     ],
     keywords='reinforcement, machine, learning, research',
     packages=find_packages(),
-    install_requires=install_requires,
     license='MIT',
 )
