@@ -9,9 +9,6 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 install_requires = [
  
     'gym[mujoco] >= 0.18.0',
-    'flax == 0.3.4',
-    'ml_collections == 0.1.0', 
-    'd4rl @ git+https://github.com/rail-berkeley/d4rl@master#egg=d4rl'
 ]
 
 description = ('Implementations of Reinforcement Learning algorithms in Jax.')
