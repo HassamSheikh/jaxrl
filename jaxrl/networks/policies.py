@@ -1,3 +1,4 @@
+import functools
 from typing import Optional, Sequence, Tuple
 
 import flax.linen as nn
@@ -127,8 +128,8 @@ class NormalTanhMixturePolicy(nn.Module):
         return tfd.Independent(dist, 1)
 
 
-@jax.partial(jax.jit, static_argnums=(1, 5))
-def sample_actions(
+@functools.partial(jax.jit, static_argnames=('actor_def', 'distribution'))
+def _sample_actions(
         rng: PRNGKey,
         actor_def: nn.Module,
         actor_params: Params,
@@ -143,3 +144,14 @@ def sample_actions(
                                temperature)
         rng, key = jax.random.split(rng)
         return rng, dist.sample(seed=key)
+
+
+def sample_actions(
+        rng: PRNGKey,
+        actor_def: nn.Module,
+        actor_params: Params,
+        observations: np.ndarray,
+        temperature: float = 1.0,
+        distribution: str = 'log_prob') -> Tuple[PRNGKey, jnp.ndarray]:
+    return _sample_actions(rng, actor_def, actor_params, observations,
+                           temperature, distribution)
