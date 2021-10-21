@@ -13,7 +13,7 @@ install_requires = [
     'optax >= 0.0.6', 'tensorboardX == 2.1',
     'tensorflow-probability >= 0.14.1', 'imageio >= 2.9.0',
     'imageio-ffmpeg >= 0.4.3',
-    'd4rl @ git+https://github.com/HassamSheikh/d4rl/d4rl'
+    'd4rl @ git+https://github.com/HassamSheikh/d4rl'
 ]
 
 description = ('Implementations of Reinforcement Learning algorithms in Jax.')
